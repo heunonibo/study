@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Content page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<h1>Content page</h1>
+<script id="entry-template" type="text/x-handlebars-template">
+  <table>
+      <thead>
+          <th>이름</th>
+          <th>아이디</th>
+          <th>제공하는 패스워드</th>
+          <th>메일</th>
+      </thead>
+      <tbody>
+          {{#users}}
+          <tr>
+              <td>{{name}}</td>
+              <td>{{id}}</td>
+              <td>{{password id}}</td>
+              <td><a href="mailto:{{email id}}">{{email id}}</a></td>
+          </tr>
+          {{/users}}
+      </tbody>
+  </table>
+</script>
+
+<section class="tabModule">
+  <ul class="tab_menu">
+    <li class="active"><a href="#">first</a></li>
+    <li><a href="#">second</a></li>
+    <li><a href="#">third</a></li>
+    <li><a href="#">fourth</a></li>
+  </ul>
+  <div class="tab_container">
+    <div class="tab_content active">
+      <h2>first section</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, minus!</p>
+    </div>
+
+    <div class="tab_content">
+      <h2>second section</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, minus!</p>
+    </div>
+
+    <div class="tab_content">
+      <h2>third section</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, minus!</p>
+    </div>
+
+    <div class="tab_content">
+      <h2>fourth section</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, minus!</p>
+    </div>
+  </div>
+</section>
+
+<script data-main="./js/content" src="./js/require.js"></script>
+</body>
+</html>
