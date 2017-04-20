@@ -1,2 +1,1 @@
-# study
-# study 
+# Requirejs study 
